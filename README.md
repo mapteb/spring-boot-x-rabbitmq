@@ -1,8 +1,7 @@
 # Spring Boot Integration RabbitMQ
 
-```
 A Spring Boot helloworld style web application that publishes and consumes messages from RabbitMQ using Java 17 and Gradle build system. RabbitMQ runs in a docker container.
-```
+
 
 ## Features
 
