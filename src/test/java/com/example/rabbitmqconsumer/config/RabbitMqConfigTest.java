@@ -1,4 +1,4 @@
-package com.example.rabbitmqconsumer.config;
+/* package com.example.rabbitmqconsumer.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -72,4 +72,4 @@ public class RabbitMqConfig {
         template.setMessageConverter(messageConverter());
         return template;
     }
-}
+} */

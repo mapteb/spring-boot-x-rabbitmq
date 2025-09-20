@@ -28,11 +28,20 @@ podman run -d --name rabbitmq-server -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEF
 
 3. Publish a message:
 
+Based on the app.rabbimq.exchange.name and app.rabbitmq.routing-key the message is published to the queue name configured in applicatin.yml.
+
 curl -X POST "http://localhost:8080/api/messages/publish" -H "Content-Type: application/json" -d "{\"id\": \"1\", \"content\": \"mycontent\", \"type\": \"mytype\"}" -v
 
-4. The Spring Boot app's RabbitMQListener should receive and echo the message like:
+4. Consume the message:
+
+The Spring Boot app's RabbitMQListener should receive (from app.rabbimq.queue.name) and echo the message like:
 
 Successfully processed message with ID: 1
+
+The processed message can also be echoed using:
+
+curl "http://localhost:8080/api/messages/processed"
+
 ```
 
 

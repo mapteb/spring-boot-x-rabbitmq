@@ -36,6 +36,13 @@ public class RabbitMqConfig {
         return new DirectExchange(exchangeName, true, false);
     }
 
+    /*
+     * Current Flow:
+        MessagePublisherService.publishMessage() → sends to exchange (message.exchange)
+        Uses routing key (message.routing.key)
+        RabbitMQ routes the message to the queue (message.queue) 
+        based on the binding configuration in RabbitMqConfig.java
+     */
     @Bean
     public Binding messageBinding() {
         return BindingBuilder.bind(messageQueue())
