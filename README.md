@@ -20,7 +20,7 @@ A Spring Boot helloworld style web application that publishes and consumes messa
 ```
 1. Run RabbitMQ:
 
-podman run -d --name rabbitmq-server -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest rabbitmq:3.12-management
+podman run -d --name rabbitmq-server -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest rabbitmq:3
 
 2. Run the Spring Boot app:
 
